@@ -1,22 +1,50 @@
-# Leo700-bit
+# Haoran Xu
 
-Computer vision · Machine learning · Control systems
+**M.S.E. student in Electrical and Computer Engineering at Johns Hopkins University**
 
-I build experiments around visual recognition, image reconstruction, and feedback control.
+I work on computational imaging, biomedical sensing, and robotics. I’m interested in how signals and images can be used to measure physical processes and control devices.
 
-## Featured project
+## Current work
+
+- **Reproducible image deblurring.** I compare FFT-based Tikhonov regularization and total variation solved by ADMM. I use held-out images, numerical solver checks, and paired noise experiments to evaluate reconstruction quality with PSNR and SSIM.
+- **LingShu Intelligence Studio.** I founded a student-led studio in 2025 to build prototypes in embedded systems, multimodal sensing, and assistive robotics.
+
+## Research and engineering experience
+
+- **Blood-flow estimation with diffuse correlation spectroscopy** · Undergraduate research, 2025–2026. I estimated blood-flow indices from optical autocorrelation measurements and compared three estimators across photon counts, sampling rates, and noise conditions.
+- **Cable-driven hand exoskeleton** · Team lead, 2025. I led development of a stroke-rehabilitation prototype that combined forearm sEMG, bend sensors, and 3D-printed actuation components. I trained a CNN–Transformer to classify gestures from sEMG signals.
+- **EMG-controlled 6-DoF robotic arm** · Summer research fellowship, 2024. I developed an EMG filtering and classification pipeline and integrated MPU6050 inertial measurements for motion tracking.
+- **GaN and metal-oxide device fabrication** · Micro/nano laboratory, 2026. I fabricated GaN MIS-HEMTs and metal-oxide thin-film transistors, then characterized their electrical and light-pulse responses.
+
+## Selected projects
 
 ### Video gesture recognition with CNN + Transformer
 
-![Gesture recognition pipeline: sample 12 RGB frames, encode each frame with MobileNetV3-Small, and classify the sequence with a temporal Transformer.](assets/gesture-pipeline.png)
+![Gesture recognition pipeline from sampled RGB frames through MobileNetV3-Small and a temporal Transformer.](assets/gesture-pipeline.png)
 
-I built a PyTorch pipeline for four dynamic gestures and evaluated it on people held out from training. The project compares a temporal Transformer with mean-pooled CNN features and a wrist-motion baseline, then tests whether shuffling frames changes predictions.
+This PyTorch project classifies four gestures from RGB clips. I evaluated the Transformer and two baselines on participants held out from training and validation. I also shuffled the frame order to test how much the classifier relied on temporal information.
 
-[Explore the architecture and results →](projects/gesture-recognition.md)
+[Explore the model and results →](projects/gesture-recognition.md)
 
-## Other project areas
+### Quadcopter–pendulum control simulation
 
-| Area | Project work |
+I worked on MATLAB and Simulink models for state feedback, observer-based control, and discrete-time implementation. The project includes waypoint-tracking simulations for a quadcopter carrying an inverted pendulum.
+
+## Technical toolkit
+
+| Area | Tools |
 | --- | --- |
-| Image restoration | Compared FFT-based Tikhonov regularization with anisotropic total variation solved by ADMM for image deblurring. |
-| Control systems | Worked with quadcopter–pendulum models and waypoint-tracking simulations in MATLAB and Simulink. |
+| Scientific computing and vision | Python, NumPy, SciPy, PyTorch, OpenCV |
+| Embedded systems and control | C/C++, MATLAB, Simulink, STM32, ROS 2 |
+| Hardware prototyping and development | KiCad, Altium Designer, SolidWorks, Git, Linux |
+
+## Education
+
+- **Johns Hopkins University** · M.S.E. in Electrical and Computer Engineering, expected May 2028
+- **Xi’an Jiaotong-Liverpool University** · B.Eng. in Electronic Science and Technology, 2022–2026
+
+## Selected honors
+
+- RoboMaster University Championship · Northern Regional First Prize and National Finals Second Prize with XJTLU GMaster’s embedded systems team, 2023
+- National Undergraduate Electronics Design Contest · Jiangsu Province Second Prize, 2025
+- COMAP Mathematical Contest in Modeling · Honorable Mention, 2025
